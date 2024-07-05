@@ -1,0 +1,4 @@
+irmovq $0x100, %rbx   
+irmovq $0x200, %rdx   
+addq %rdx, %rbx
+halt 

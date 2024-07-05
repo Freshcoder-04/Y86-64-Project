@@ -1,0 +1,15 @@
+irmovl $1, %rdx
+irmovl $2, %rbx
+subl %rdx, %rbx
+irmovl $128,%rsp
+rmmovl %rsp, 100(%rbx)
+pushl %rdx
+popl  %rax
+je done
+call proc
+done:
+    nop
+    halt
+proc:
+    irmovq $8, %rcx 
+    ret
